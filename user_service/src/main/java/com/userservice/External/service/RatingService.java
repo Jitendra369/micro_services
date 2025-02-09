@@ -10,6 +10,6 @@ import java.util.Optional;
 @FeignClient(name = "RATING-SERVICE")
 public interface RatingService {
 
-    @PostMapping("/api/core/rating/save")
+    @PostMapping("/api/core/rating")
     public Optional<RatingDto> saveRating(RatingDto ratingDto);
 }

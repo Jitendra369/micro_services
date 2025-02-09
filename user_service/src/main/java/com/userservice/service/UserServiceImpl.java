@@ -40,6 +40,8 @@ public class UserServiceImpl implements UserService{
             return userDto;
         }).orElseGet(()->{
             User user = mapUserDto(userDto);
+//            save new User
+            userRepo.save(user);
             userDto.setName(user.getName());
             userDto.setAddress(userDto.getAddress());
             userDto.setEmail(user.getEmail());
