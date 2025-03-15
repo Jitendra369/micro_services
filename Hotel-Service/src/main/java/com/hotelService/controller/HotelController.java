@@ -11,12 +11,18 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/core/hotel")
+@RequestMapping("/hotel")
 @RequiredArgsConstructor
 public class HotelController {
 
     @Autowired
     private HotelServiceImpl hotelService;
+
+    @GetMapping()
+    public List<Hotel> getAllHotelsV1(){
+        return hotelService.getAllHotels();
+    }
+
 
     @PostMapping
     public Hotel addHotel(@RequestBody Hotel hotel){

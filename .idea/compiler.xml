@@ -7,27 +7,39 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="APIGateWay" />
         <module name="Service-registery" />
       </profile>
-      <profile name="Annotation profile for UserService" enabled="true">
+      <profile name="Annotation profile for Rating-Service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
-        <module name="demo" />
         <module name="Rating-Service" />
         <module name="Hotel-Service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api_gateway_service" target="17" />
+      <module name="ApiGateway" target="17" />
+      <module name="ApiGateway (1) (com.apigateway)" target="17" />
+      <module name="demo" target="17" />
+      <module name="demo (1) (com.apigateway)" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="APIGateWay" options="-parameters" />
+      <module name="ApiGateway" options="-parameters" />
+      <module name="ApiGateway (1) (com.apigateway)" options="-parameters" />
       <module name="Hotel-Service" options="-parameters" />
       <module name="Rating-Service" options="-parameters" />
       <module name="Service-registery" options="-parameters" />
+      <module name="api_gateway_service" options="-parameters" />
       <module name="demo" options="-parameters" />
+      <module name="demo (1) (com.apigateway)" options="-parameters" />
     </option>
   </component>
 </project>
